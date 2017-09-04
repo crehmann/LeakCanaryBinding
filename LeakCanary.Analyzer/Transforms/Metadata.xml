@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <attr path="/api/package[@name='com.squareup.leakcanary']" name="managedName">Square.LeakCanary</attr>
+  <attr path="/api/package[@name='com.squareup.leakcanary.analyzer']" name="managedName">Square.LeakCanary.Analyzer</attr>
+
+  <remove-node path="/api/package[starts-with(@name, 'com.squareup.haha')]" />
+
+  <attr path="api/package[@name='com.squareup.leakcanary']/class[@name='AnalysisResult']/method[@name='failure']" name="managedName">CreateFailure</attr>
+  <attr path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Type']" name="managedName">LeakTraceElementType</attr>
+  <attr path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Holder']" name="managedName">LeakTraceElementHolder</attr>
+  <remove-node path="api/package[@name='com.squareup.leakcanary']/class[@name='LeakTraceElement.Holder']/field[@name='CLASS']" />
+  <remove-node path="/api/package[@name='com.squareup.leakcanary.analyzer']/class[@name='R']" />
+  <remove-node path="/api/package[@name='com.squareup.leakcanary.analyzer']/class[@name='BuildConfig']"/>
+  <remove-node path="/api/package[@name='com.squareup.leakcanary.watcher']/class[@name='BuildConfig']"/>
+  <remove-node path="/api/package[@name='com.squareup.leakcanary.watcher']/class[@name='R']" />
+</metadata>

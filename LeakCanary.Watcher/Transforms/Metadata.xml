@@ -1,0 +1,7 @@
+﻿<metadata>
+  <attr path="/api/package[@name='com.squareup.leakcanary']" name="managedName">Square.LeakCanary</attr>
+  <attr path="/api/package[@name='com.squareup.leakcanary.watcher']" name="managedName">Square.LeakCanary.Watcher</attr>
+
+  <remove-node path="/api/package[@name='com.squareup.leakcanary.watcher']/class[@name='BuildConfig']"/>
+  <remove-node path="/api/package[@name='com.squareup.leakcanary.watcher']/class[@name='R']" />
+</metadata>

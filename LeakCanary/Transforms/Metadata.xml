@@ -1,0 +1,14 @@
+﻿<metadata>
+
+  <remove-node path="/api/package[starts-with(@name, 'com.squareup.leakcanary.internal')]" />
+
+  <remove-node path="/api/package[@name='com.squareup.leakcanary']/class[@name='BuildConfig']"/>
+
+  <attr path="/api/package[@name='com.squareup.leakcanary']" name="managedName">Square.LeakCanary</attr>
+  <attr path="/api/package[@name='com.squareup.leakcanary']/class[@name='LeakCanary']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.squareup.leakcanary']/class[@name='LeakCanary']" name="managedName">LeakCanaryXamarin</attr>
+
+
+  <attr path="/api/package[@name='com.squareup.leakcanary']/class[@name='AbstractAnalysisResultService' and @extends='android.app.IntentService']"
+        name="extends">mono.android.app.IntentService</attr>
+</metadata>
