@@ -49,9 +49,6 @@
     <EmbeddedReferenceJar Include="Jars\haha-2.0.3.jar" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\leakcanary-analyzer-1.5.1.jar" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\LeakCanary.Watcher\LeakCanary.Watcher.csproj">
       <Project>{75374697-6a19-42fe-8aa8-ece7f7efea07}</Project>
       <Name>LeakCanary.Watcher</Name>
@@ -59,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Additions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="Jars\leakcanary-analyzer-release.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

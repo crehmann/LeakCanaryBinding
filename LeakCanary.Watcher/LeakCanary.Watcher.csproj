@@ -46,10 +46,10 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\leakcanary-watcher-1.5.1.jar" />
+    <Folder Include="Additions\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Additions\" />
+    <LibraryProjectZip Include="Jars\leakcanary-watcher-release.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
