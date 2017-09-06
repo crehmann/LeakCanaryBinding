@@ -66,8 +66,8 @@ namespace SampleApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060007
-			public const int async_task = 2131099655;
+			// aapt resource value: 0x7f060008
+			public const int button = 2131099656;
 			
 			// aapt resource value: 0x7f060002
 			public const int leak_canary_action = 2131099650;
@@ -89,6 +89,9 @@ namespace SampleApp
 			
 			// aapt resource value: 0x7f060004
 			public const int leak_canary_row_time = 2131099652;
+			
+			// aapt resource value: 0x7f060007
+			public const int textView = 2131099655;
 			
 			static Id()
 			{
@@ -119,7 +122,10 @@ namespace SampleApp
 			public const int leak_canary_ref_top_row = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Main = 2130903045;
+			public const int LeakingActivity = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int Main = 2130903046;
 			
 			static Layout()
 			{

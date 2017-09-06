@@ -1,27 +1,34 @@
 ﻿using Android.App;
 using Android.OS;
-using System.Threading;
-using System.Threading.Tasks;
+using Android.Widget;
+using System;
 
 namespace SampleApp
 {
     [Activity(Label = "SampleApp", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        protected MainActivity(System.IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer) : base(javaReference, transfer)
-        {
-        }
-
-        public MainActivity() : base()
-        {
-        }
+        private Button _button;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
-            var button = FindViewById(Resource.Id.async_task);
-            button.Click += async (sender, e) => await Task.Factory.StartNew(() => Thread.Sleep(5000)).ConfigureAwait(false);
+            _button = FindViewById<Button>(Resource.Id.button);
+            _button.Click += OnButtonClicked;
+        }
+
+        protected override void OnDestroy()
+        {
+            _button.Click -= OnButtonClicked;
+            _button.Dispose();
+            base.OnDestroy();
+            Dispose();
+        }
+
+        private void OnButtonClicked(object sender, EventArgs e)
+        {
+            StartActivity(typeof(LeakingActivity));
         }
     }
 }
