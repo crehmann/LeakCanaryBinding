@@ -24,7 +24,7 @@ namespace SampleApp
             base.OnDestroy();
             
             // Dispose the activity itself
-            //Dispose();
+            Dispose();
         }
     }
 }
